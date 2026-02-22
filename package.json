@@ -1,0 +1,54 @@
+{
+  "name": "ascend-utility",
+  "version": "1.0.0",
+  "description": "Ascend Utility desktop login",
+  "main": "main.js",
+  "scripts": {
+    "start": "set ELECTRON_RUN_AS_NODE=&& electron .",
+    "dev": "set ELECTRON_RUN_AS_NODE=&& electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder --win nsis",
+    "build:exe": "electron-packager . \"Ascend Utility\" --platform=win32 --arch=x64 --overwrite --out=release --asar"
+  },
+  "keywords": [
+    "electron",
+    "supabase",
+    "email-login",
+    "hwid"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.49.1",
+    "node-machine-id": "^1.1.12"
+  },
+  "devDependencies": {
+    "electron": "^35.0.0",
+    "electron-builder": "^24.13.3",
+    "electron-packager": "^17.1.2"
+  },
+  "build": {
+    "appId": "com.ascend.utility",
+    "productName": "Ascend Utility",
+    "asar": true,
+    "files": [
+      "**/*",
+      "!dist{,/**/*}",
+      "!build{,/**/*}"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  }
+}

@@ -1,0 +1,21 @@
+:root {
+  --bg: #061023;
+  --bg-soft: #0a1730;
+  --bg-panel: #0d1c37;
+  --bg-panel-2: #122648;
+  --fg: #eaf2ff;
+  --muted: #9ab2d9;
+  --border: #27456f;
+  --border-strong: #3d6aa3;
+  --danger: #ffb8b8;
+  --shadow-soft: rgba(1, 9, 23, 0.62);
+  --shadow-glow: rgba(66, 141, 255, 0.32);
+  --radius-sm: 12px;
+  --radius-md: 18px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 28px;
+}

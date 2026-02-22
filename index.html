@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ascend Utility</title>
+    <link rel="stylesheet" href="./tokens.css" />
+    <link rel="stylesheet" href="./theme.css" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="bg-gradient" aria-hidden="true"></div>
+    <div class="bg-noise" aria-hidden="true"></div>
+
+    <header class="titlebar">
+      <div class="titlebar-left">
+        <div class="titlebar-logo">A</div>
+        <span class="titlebar-name">Ascend Utility</span>
+      </div>
+      <div class="titlebar-controls">
+        <button id="win-minimize" class="win-btn" type="button" aria-label="Minimize">
+          <span class="glyph">-</span>
+        </button>
+        <button id="win-maximize" class="win-btn" type="button" aria-label="Maximize">
+          <span class="glyph">[]</span>
+        </button>
+        <button id="win-close" class="win-btn win-close" type="button" aria-label="Close">
+          <span class="glyph">x</span>
+        </button>
+      </div>
+    </header>
+
+    <main class="app">
+      <section class="card side-card left-panel">
+        <div class="logo-wrap">
+          <div class="logo">A</div>
+        </div>
+        <h1 class="title">Ascend Network</h1>
+        <p class="subtitle">Help, updates, and release announcements.</p>
+
+        <div class="pill-row">
+          <span class="pill">Live Support</span>
+          <span class="pill">Status Updates</span>
+        </div>
+
+        <div class="left-actions">
+          <a
+            class="side-btn"
+            href="https://discord.gg/nCKVxdc3NV"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            Support Discord
+          </a>
+          <button class="side-btn side-btn-muted" type="button" disabled>
+            Our Website (Coming Soon)
+          </button>
+        </div>
+
+        <p class="microcopy">
+          For account lock issues, open a support ticket in Discord.
+        </p>
+      </section>
+
+      <section class="right-panel-wrap">
+        <section class="card" id="login-card" aria-live="polite">
+          <div class="logo-wrap">
+            <div class="logo">A</div>
+          </div>
+          <h1 class="title">Operator Sign In</h1>
+          <p class="subtitle">Use your account credentials to continue.</p>
+
+          <div class="field">
+            <label class="label" for="email">Email</label>
+            <input
+              class="input"
+              id="email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              placeholder="name@example.com"
+            />
+          </div>
+
+          <div class="field">
+            <label class="label" for="password">Password</label>
+            <input
+              class="input"
+              id="password"
+              name="password"
+              type="password"
+              autocomplete="current-password"
+              placeholder="Your password"
+            />
+          </div>
+
+          <button id="login-btn" class="login-btn" type="button">
+            <span>Sign in</span>
+          </button>
+
+          <div class="processing" id="processing" aria-hidden="true">
+            <span class="spinner"></span>
+            <span id="status-text">Signing in...</span>
+          </div>
+
+          <p id="error-text" class="error" role="alert"></p>
+        </section>
+
+        <section class="card logged-in" id="logged-in-panel" aria-hidden="true">
+          <h2>Logged in</h2>
+          <p id="welcome-text">Welcome back</p>
+        </section>
+      </section>
+    </main>
+
+    <script src="./node_modules/@supabase/supabase-js/dist/umd/supabase.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
